@@ -119,6 +119,26 @@
             margin-top: 20px;
         }
 
+        /* Special Styling for the 2018 Timeline Section */
+        .timeline-section-2018 {
+            background: url('media/HS.jpg') no-repeat center center;
+            background-size: cover; /* Ensure image covers the entire section */
+            background-position: center -20%; /* Adjusted to move photo up */
+            height: 500px; /* Adjusted height */
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Make the section span the entire width */
+        }
+        .timeline-section-2018 h3,
+        .timeline-section-2018 p {
+            z-index: 1; /* Ensure text is above the background */
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
         /* Special Styling for the 2022 Timeline Section */
         .timeline-section-2022 {
             background: url('media/graduation.jpg') no-repeat center center;
@@ -175,6 +195,14 @@
         <div>
             <h1>Welcome to My Journey</h1>
             <p>Exploring life, projects, and passions.</p>
+        </div>
+    </div>
+
+    <!-- Timeline Section 2018 (with high school photo as background) -->
+    <div class="timeline-section-2018">
+        <div>
+            <h3>2018</h3>
+            <p>Completed my high school journey and graduated with honors.</p>
         </div>
     </div>
 
