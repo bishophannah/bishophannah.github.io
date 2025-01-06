@@ -129,10 +129,19 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+            position: relative;
         }
-        .timeline-section-2000 h3,
+        .timeline-section-2000 h3 {
+            font-size: 12rem;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background: linear-gradient(to right, #fff, #fff);
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
         .timeline-section-2000 p {
-            z-index: 1; /* Ensure text is above the background */
+            z-index: 1;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
