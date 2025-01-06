@@ -61,122 +61,15 @@
         nav a:hover {
             text-decoration: underline;
         }
+
         /* Header Section */
         .header-container {
             position: relative;
             background: url('media/Header.jpg') no-repeat center center;
             background-size: cover;
-            height: 100vh;
+            height: 100vh; /* Full screen height */
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .header-container h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-family: 'Playfair Display', serif;
-            color: #fff;
-            z-index: 2;
-        }
-        .header-container p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-family: 'Lora', serif;
-            color: #fff;
-            z-index: 2;
-        }
-
-        /* Timeline Section Styles */
-        .timeline-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 5%;
-            background-color: #f1f1f1;
-            margin-bottom: 50px;
-            border-top: 2px solid #333;
-            width: 100%; /* Make each section span the entire width */
-        }
-        .timeline-section:nth-child(even) {
-            background-color: #ffffff;
-        }
-        .timeline-section h3 {
-            font-size: 2.5rem;
-            font-family: 'Playfair Display', serif;
-            margin: 0;
-            color: #333;
-        }
-        .timeline-section p {
-            font-size: 1.2rem;
-            color: #555;
-            text-align: center;
-            font-family: 'Lora', serif;
-            margin-top: 20px;
-        }
-
-        /* Special Styling for the 2018 Timeline Section */
-        .timeline-section-2018 {
-            background: url('media/HS.jpg') no-repeat center center;
-            background-size: cover; /* Ensure image covers the entire section */
-            background-position: center -20%; /* Adjusted to move photo up */
-            height: 500px; /* Adjusted height */
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Make the section span the entire width */
-        }
-        .timeline-section-2018 h3,
-        .timeline-section-2018 p {
-            z-index: 1; /* Ensure text is above the background */
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Special Styling for the 2022 Timeline Section */
-        .timeline-section-2022 {
-            background: url('media/graduation.jpg') no-repeat center center;
-            background-size: cover; /* Ensure image covers the entire section */
-            background-position: center -20%; /* Adjusted to move photo up */
-            height: 500px; /* Adjusted height */
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Make the section span the entire width */
-        }
-        .timeline-section-2022 h3,
-        .timeline-section-2022 p {
-            z-index: 1; /* Ensure text is above the background */
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Special Styling for the 2023 Timeline Section */
-        .timeline-section-2023 {
-            background: url('media/graduation2.jpg') no-repeat center center;
-            background-size: cover; /* Ensure image covers the entire section */
-            background-position: center -20%; /* Adjusted to move photo up */
-            height: 500px; /* Adjusted height */
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%; /* Make the section span the entire width */
-        }
-        .timeline-section-2023 h3,
-        .timeline-section-2023 p {
-            z-index: 1; /* Ensure text is above the background */
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 100px; /* Pushes the header below the navigation bar */
         }
     </style>
 </head>
@@ -191,47 +84,6 @@
     </nav>
 
     <!-- Header Section -->
-    <div class="header-container">
-        <div>
-            <h1>Welcome to My Journey</h1>
-            <p>Exploring life, projects, and passions.</p>
-        </div>
-    </div>
-
-    <!-- Timeline Section 2018 -->
-    <div class="timeline-section-2018">
-        <div>
-            <h3>2018</h3>
-            <p>Completed my high school journey and graduated with honors.</p>
-        </div>
-    </div>
-
-    <!-- Timeline Section 2022 -->
-    <div class="timeline-section-2022">
-        <div>
-            <h3>2022</h3>
-            <p>Graduated with a Bachelor's Degree in Business Administration with a minor in Media Journalism.</p>
-        </div>
-    </div>
-
-    <!-- Timeline Section 2023 -->
-    <div class="timeline-section-2023">
-        <div>
-            <h3>2023</h3>
-            <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
-        </div>
-    </div>
-
-    <!-- Timeline Section 2024 -->
-    <div class="timeline-section">
-        <h3>2024</h3>
-        <p>Expanded my skill set and portfolio by working on multiple projects.</p>
-    </div>
-
-    <!-- Timeline Section 2025 -->
-    <div class="timeline-section">
-        <h3>2025</h3>
-        <p>Continuing to explore new opportunities and professional growth in various fields.</p>
-    </div>
+    <div class="header-container"></div>
 </body>
 </html>
