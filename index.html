@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Landing Page</title>
     <style>
+        @font-face {
+            font-family: 'Brother Signature';
+            src: url('https://fonts.cdnfonts.com/s/22253/BrotherSignature-Regular.woff') format('woff');
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
         }
@@ -30,7 +35,7 @@
             }
         }
         nav .logo {
-            font-family: 'Georgia', serif;
+            font-family: 'Brother Signature', serif;
             font-size: 1.5rem;
             font-weight: bold;
             color: #333;
@@ -97,7 +102,7 @@
 </head>
 <body>
     <nav>
-        <div class="logo">My Name</div>
+        <div class="logo" style="font-family: 'Brother Signature'; font-size: 2rem;">Hannah Bishop</div>
         <div>
             <a href="#about-me">About Me</a>
             <a href="#education">Education</a>
