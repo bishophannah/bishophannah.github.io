@@ -49,8 +49,11 @@
             text-decoration: underline;
         }
         header {
-            background: url('media/wanaka.jpg') no-repeat center center/cover; /* Replaced with wanaka.jpg */
-            height: 60vh;
+            background: url('media/wanaka.jpg') no-repeat center center; /* Replaced with wanaka.jpg */
+            background-size: contain; /* Ensures the image is fully visible and not cropped */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 60vh; /* Adjusted to ensure the image fits nicely */
             display: flex;
             justify-content: center;
             align-items: center;
