@@ -118,6 +118,24 @@
             margin-top: 20px;
         }
 
+        /* Special Styling for the 2000 Timeline Section */
+        .timeline-section-2000 {
+            background: url('media/graduation.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .timeline-section-2000 h3,
+        .timeline-section-2000 p {
+            z-index: 1; /* Ensure text is above the background */
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body>
@@ -138,10 +156,12 @@
         </div>
     </div>
 
-    <!-- Timeline Section 2000 -->
-    <div class="timeline-section">
-        <h3>2000</h3>
-        <p>Born and began my journey in the world.</p>
+    <!-- Timeline Section 2000 (with graduation photo as background) -->
+    <div class="timeline-section-2000">
+        <div>
+            <h3>2000</h3>
+            <p>Born and began my journey in the world.</p>
+        </div>
     </div>
 
     <!-- Timeline Section 2018 -->
