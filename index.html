@@ -136,6 +136,25 @@
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
+
+        /* Special Styling for the 2023 Timeline Section */
+        .timeline-section-2023 {
+            background: url('media/graduation2.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .timeline-section-2023 h3,
+        .timeline-section-2023 p {
+            z-index: 1; /* Ensure text is above the background */
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body>
@@ -176,10 +195,12 @@
         </div>
     </div>
 
-    <!-- Timeline Section 2023 -->
-    <div class="timeline-section">
-        <h3>2023</h3>
-        <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
+    <!-- Timeline Section 2023 (with graduation2 photo as background) -->
+    <div class="timeline-section-2023">
+        <div>
+            <h3>2023</h3>
+            <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
+        </div>
     </div>
 
     <!-- Timeline Section 2024 -->
