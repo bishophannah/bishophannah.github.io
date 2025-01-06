@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Lora', serif;
@@ -14,7 +15,6 @@
             color: #333;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
-
         nav {
             background-color: #fff;
             display: flex;
@@ -28,9 +28,9 @@
             width: 100%;
             z-index: 1000;
             transition: top 0.3s;
+            box-sizing: border-box;
             background-color: rgba(255, 255, 255, 0.9);
         }
-
         @media (max-width: 768px) {
             nav {
                 padding: 20px 5%;
@@ -45,13 +45,11 @@
                 margin: 10px 0;
             }
         }
-
         nav .logo {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: #333;
         }
-
         nav a {
             font-family: 'Playfair Display', serif;
             color: #333;
@@ -60,11 +58,9 @@
             font-size: 1.05rem;
             text-transform: uppercase;
         }
-
         nav a:hover {
             text-decoration: underline;
         }
-
         /* Header Section */
         .header-container {
             position: relative;
@@ -77,7 +73,6 @@
             align-items: center;
             text-align: center;
         }
-
         .header-container h1 {
             font-size: 3rem;
             margin: 0;
@@ -86,7 +81,6 @@
             color: #fff;
             z-index: 2;
         }
-
         .header-container p {
             font-size: 1.2rem;
             margin-top: 10px;
@@ -107,18 +101,15 @@
             margin-bottom: 50px;
             border-top: 2px solid #333;
         }
-
         .timeline-section:nth-child(even) {
             background-color: #ffffff;
         }
-
         .timeline-section h3 {
             font-size: 2.5rem;
             font-family: 'Playfair Display', serif;
             margin: 0;
             color: #333;
         }
-
         .timeline-section p {
             font-size: 1.2rem;
             color: #555;
@@ -127,8 +118,8 @@
             margin-top: 20px;
         }
 
-        /* Special Styling for the 2022 Timeline Section */
-        .timeline-section-2022 {
+        /* Special Styling for the 2000 Timeline Section */
+        .timeline-section-2000 {
             background: url('media/graduation.jpg') no-repeat center center;
             background-size: cover;
             height: 500px;
@@ -138,24 +129,10 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            position: relative;
         }
-
-        .timeline-section-2022 h3 {
-            font-size: 12rem; /* Make the number large */
-            color: transparent; /* Make the inside transparent */
-            -webkit-background-clip: text;
-            background-clip: text;
-            background: url('media/graduation.jpg') no-repeat center center;
-            background-size: cover; /* Make sure the photo spans the number */
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-            z-index: 2; /* Make sure it appears above the background */
-            font-weight: bold;
-            letter-spacing: 10px;
-        }
-
-        .timeline-section-2022 p {
-            z-index: 1;
+        .timeline-section-2000 h3,
+        .timeline-section-2000 p {
+            z-index: 1; /* Ensure text is above the background */
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
@@ -179,18 +156,30 @@
         </div>
     </div>
 
-    <!-- Timeline Section 2000 -->
-    <div class="timeline-section">
-        <h3>2000</h3>
-        <p>Born and began my journey in the world!</p>
+    <!-- Timeline Section 2000 (with graduation photo as background) -->
+    <div class="timeline-section-2000">
+        <div>
+            <h3>2000</h3>
+            <p>Born and began my journey in the world.</p>
+        </div>
     </div>
 
-    <!-- Timeline Section 2022 with Graduation Photo -->
-    <div class="timeline-section-2022">
-        <div>
-            <h3>2022</h3>
-            <p>Graduated with a Bachelor's Degree in Business Administration with a minor in Media Journalism.</p>
-        </div>
+    <!-- Timeline Section 2018 -->
+    <div class="timeline-section">
+        <h3>2018</h3>
+        <p>Completed my high school journey and graduated with honors.</p>
+    </div>
+
+    <!-- Timeline Section 2022 -->
+    <div class="timeline-section">
+        <h3>2022</h3>
+        <p>Graduated with a Bachelor's Degree in Business Administration with a minor in Media Journalism.</p>
+    </div>
+
+    <!-- Timeline Section 2023 -->
+    <div class="timeline-section">
+        <h3>2023</h3>
+        <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
     </div>
 
     <!-- Timeline Section 2024 -->
