@@ -21,18 +21,18 @@
             align-items: center;
             padding: 40px 5%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: fixed; /* This will fix the nav bar at the top of the screen */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
             transition: top 0.3s;
-            box-sizing: border-box; /* Ensures padding is accounted for in the width */
-            background-color: rgba(255, 255, 255, 0.9); /* Optional: slight transparency for effect */
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.9);
         }
         @media (max-width: 768px) {
             nav {
-                padding: 20px 5%; /* Adjusted padding for smaller screens */
+                padding: 20px 5%;
                 flex-direction: column;
                 text-align: center;
             }
@@ -40,7 +40,7 @@
                 margin-bottom: 10px;
             }
             nav a {
-                font-size: 1.2rem; /* Adjust font size for smaller screens */
+                font-size: 1.2rem;
                 margin: 10px 0;
             }
         }
@@ -62,19 +62,17 @@
         }
         header {
             background: url('media/Header.jpg') no-repeat center center;
-            background-size: cover;
+            background-size: cover;  /* Ensures the image spans the full screen while maintaining its aspect ratio */
             background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
+            height: 100vh;  /* Full screen height */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             text-align: center;
             position: relative;
-            top: -20px;
+            top: 0;  /* Adjusts position to align with top of the screen */
             z-index: -1;
-            clip-path: polygon(0 0, 100% 0, 100% 60%, 0 80%); /* Crop to show only the top part of the mountains */
         }
         header h1 {
             font-size: 3rem;
