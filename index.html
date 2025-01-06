@@ -62,16 +62,16 @@
         }
         header {
             background: url('media/Header.jpg') no-repeat center center;
-            background-size: cover;  /* Ensures the image spans the full screen while maintaining its aspect ratio */
+            background-size: cover;
             background-position: center;
-            height: 100vh;  /* Full screen height */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             text-align: center;
             position: relative;
-            top: 0;  /* Adjusts position to align with top of the screen */
+            top: 0;
             z-index: -1;
         }
         header h1 {
@@ -117,6 +117,41 @@
             color: #555;
             font-family: 'Lora', serif;
         }
+
+        /* Timeline Styles */
+        .timeline-container {
+            position: absolute;
+            left: 20px;
+            top: 100vh;  /* Starts below the mountain photo */
+            width: 300px;
+            padding: 20px;
+            border-left: 3px solid #333;
+            height: calc(100% - 100vh); /* Takes full height after the header */
+        }
+        .timeline-event {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-event:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -7px;
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        .timeline-event h3 {
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
+        .timeline-event p {
+            font-size: 1rem;
+            color: #555;
+            font-family: 'Lora', serif;
+        }
     </style>
 </head>
 <body>
@@ -156,5 +191,25 @@
             </div>
         </section>
     </main>
+
+    <!-- Timeline Section -->
+    <div class="timeline-container">
+        <div class="timeline-event">
+            <h3>2010</h3>
+            <p>Started my journey with education and learning the basics of design and media.</p>
+        </div>
+        <div class="timeline-event">
+            <h3>2015</h3>
+            <p>Completed my Bachelor's Degree in Business Administration with a minor in Media Journalism.</p>
+        </div>
+        <div class="timeline-event">
+            <h3>2020</h3>
+            <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
+        </div>
+        <div class="timeline-event">
+            <h3>2025</h3>
+            <p>Currently working on expanding my portfolio and exploring new opportunities.</p>
+        </div>
+    </div>
 </body>
 </html>
