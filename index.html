@@ -22,6 +22,12 @@
             align-items: center;
             padding: 40px 100px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the nav stays on top of everything */
+            transition: top 0.3s; /* Smooth transition for scrolling */
         }
         @media (max-width: 768px) {
             nav {
@@ -33,12 +39,12 @@
             }
         }
         nav .logo {
-            font-family: 'Playfair Display', serif; /* Use Playfair Display for name */
+            font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: #333;
         }
         nav a {
-            font-family: 'Playfair Display', serif; /* Use Playfair Display for navigation */
+            font-family: 'Playfair Display', serif;
             color: #333;
             text-decoration: none;
             margin: 0 20px;
@@ -49,16 +55,19 @@
             text-decoration: underline;
         }
         header {
-            background: url('media/Header.jpg') no-repeat center center; /* Replaced with Header.jpg */
-            background-size: cover; /* Ensure the image covers the entire header */
+            background: url('media/Header.jpg') no-repeat center center;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh; /* Full height of the viewport */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             text-align: center;
+            position: relative;
+            top: -20px; /* This creates the slight overlap effect */
+            z-index: -1; /* Keeps the header image behind the navigation bar */
         }
         header h1 {
             font-size: 3rem;
