@@ -88,56 +88,32 @@
             font-family: 'Lora', serif;
         }
 
-        /* Timeline Styles */
+        /* Timeline Section Styles */
         .timeline-section {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             padding: 50px 5%;
-            position: relative;
+            background-color: #f1f1f1;
             margin-bottom: 50px;
-            flex-direction: row-reverse;
+            border-top: 2px solid #333;
         }
-        .timeline-container {
-            position: fixed;
-            left: 5%;
-            top: 0;
-            width: 30px;
-            height: 100%;
-            border-left: 3px solid #333;
-            z-index: 999;
+        .timeline-section:nth-child(even) {
+            background-color: #ffffff;
         }
-        .timeline-event {
-            position: relative;
-            width: 80%;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .timeline-event:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: -12px;
-            width: 20px;
-            height: 20px;
-            background-color: #333;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-        .timeline-event h3 {
-            font-size: 2rem;
+        .timeline-section h3 {
+            font-size: 2.5rem;
             font-family: 'Playfair Display', serif;
             margin: 0;
-            text-align: center;
+            color: #333;
         }
-        .timeline-event p {
+        .timeline-section p {
             font-size: 1.2rem;
             color: #555;
             text-align: center;
             font-family: 'Lora', serif;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
     </style>
@@ -158,36 +134,22 @@
         </div>
     </header>
 
-    <!-- Timeline Section 2010 -->
-    <div class="timeline-container">
-        <div class="timeline-event">
-            <h3>2010</h3>
-            <p>Started my journey with education and learning the basics of design and media.</p>
-        </div>
-    </div>
-
     <!-- Timeline Section 2015 -->
     <div class="timeline-section">
-        <div class="timeline-event">
-            <h3>2015</h3>
-            <p>Completed my Bachelor's Degree in Business Administration with a minor in Media Journalism.</p>
-        </div>
+        <h3>2015</h3>
+        <p>Completed my Bachelor's Degree in Business Administration with a minor in Media Journalism.</p>
     </div>
 
     <!-- Timeline Section 2020 -->
     <div class="timeline-section">
-        <div class="timeline-event">
-            <h3>2020</h3>
-            <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
-        </div>
+        <h3>2020</h3>
+        <p>Started working as a digital marketing consultant, blending creativity with strategy.</p>
     </div>
 
     <!-- Timeline Section 2025 -->
     <div class="timeline-section">
-        <div class="timeline-event">
-            <h3>2025</h3>
-            <p>Currently working on expanding my portfolio and exploring new opportunities.</p>
-        </div>
+        <h3>2025</h3>
+        <p>Currently working on expanding my portfolio and exploring new opportunities.</p>
     </div>
 </body>
 </html>
