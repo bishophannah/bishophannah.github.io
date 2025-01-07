@@ -61,12 +61,16 @@
         }
 
         .navigation {
-            position: absolute;
-            bottom: 20px; /* Position the navigation at the bottom */
-            right: 20px; /* Align it to the right */
+            position: fixed; /* Make the navigation bar fixed */
+            top: 0;
+            right: 0;
+            left: 0;
             display: flex; /* Use flexbox to spread items evenly */
             justify-content: space-between; /* Evenly space the links */
-            width: 500px; /* Increased width for more space */
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+            padding: 20px;
+            z-index: 10; /* Keep navigation above other content */
         }
 
         .navigation a {
@@ -113,12 +117,14 @@
     <div class="landing-page">
         <div class="initials">Hannah</div>
         <div class="last-name">Bishop</div>
-        <div class="navigation">
-            <a href="#home">Home</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#story">Story</a>
-            <a href="#contact">Contact</a>
-        </div>
+    </div>
+
+    <!-- Navigation Bar (fixed) -->
+    <div class="navigation">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#story">Story</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <!-- Home Section -->
