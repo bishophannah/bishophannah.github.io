@@ -3,77 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique Interior Design</title>
+    <title>Simple Landing Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
-
-        /* Semi-transparent white bar at the top */
-        .top-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-            z-index: 1; /* Ensures it is on top of the image */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
         }
-
-        .main-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 60px; /* Adds space below the top bar */
-        }
-
-        .about {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .about h2 {
-            font-size: 28px;
-            color: #333;
-        }
-
-        .about p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px 20px;
-            background-color: #333;
+        .landing-page {
+            height: 100vh;
+            background-image: url('media/1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
-            font-size: 12px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .content {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .initials {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
-    <div class="top-bar"></div> <!-- Semi-transparent white bar -->
-
-    <img src="media/1.2.jpg" alt="Main Gallery Image" class="main-image">
-
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Hannah Bishop Interior Design is a boutique firm known for creating elegant and personalized spaces. With a keen eye for detail, we blend modern aesthetics with timeless design principles, ensuring that every project feels uniquely yours. Whether you're looking to transform your home or your business space, our team will work closely with you to create the perfect ambiance.</p>
-    </section>
-
-    <footer>
-        &copy; 2025 Hannah Bishop. All rights reserved.
-    </footer>
+    <div class="landing-page">
+        <div class="initials">HNB</div>
+        <div class="content">
+            <h1>Welcome to Our Website</h1>
+            <p>Your journey starts here.</p>
+            <a href="#next" class="button">Learn More</a>
+        </div>
+    </div>
 </body>
 </html>
 
