@@ -61,12 +61,12 @@
         }
 
         .navigation {
-            position: relative; /* Keep navigation in normal flow, no fixed positioning */
+            position: absolute;
+            bottom: 20px; /* Position the navigation at the bottom */
+            right: 20px; /* Align it to the right */
             display: flex; /* Use flexbox to spread items evenly */
             justify-content: space-between; /* Evenly space the links */
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+            width: 500px; /* Increased width for more space */
         }
 
         .navigation a {
@@ -113,14 +113,12 @@
     <div class="landing-page">
         <div class="initials">Hannah</div>
         <div class="last-name">Bishop</div>
-    </div>
-
-    <!-- Navigation Bar (relative positioning) -->
-    <div class="navigation">
-        <a href="#home">Home</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#story">Story</a>
-        <a href="#contact">Contact</a>
+        <div class="navigation">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#story">Story</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
 
     <!-- Home Section -->
