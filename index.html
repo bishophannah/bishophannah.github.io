@@ -18,6 +18,11 @@
             height: 100%;
             font-family: Arial, sans-serif;
         }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
         .landing-page {
             height: 100vh;
             background-image: url('media/1.jpg');
@@ -30,6 +35,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             position: relative;
         }
+
         .initials {
             position: absolute;
             top: 20px;
@@ -41,6 +47,7 @@
             text-transform: uppercase; /* Make text uppercase */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         .last-name {
             position: absolute;
             top: 60px; /* Positioning 'Bishop' just under the 'H' of 'Hannah' */
@@ -52,6 +59,7 @@
             text-transform: uppercase;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         .navigation {
             position: absolute;
             bottom: 20px; /* Position the navigation at the bottom */
@@ -60,6 +68,7 @@
             justify-content: space-between; /* Evenly space the links */
             width: 400px; /* Increase the width to create more space between items */
         }
+
         .navigation a {
             color: white;
             text-decoration: none;
@@ -68,12 +77,42 @@
             font-family: Arial, sans-serif;
             transition: color 0.3s;
         }
+
         .navigation a:hover {
             color: #ccc; /* Change color on hover */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        #portfolio {
+            background-color: #222;
+        }
+
+        #about {
+            background-color: #444;
+        }
+
+        #contact {
+            background-color: #666;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
+
     <div class="landing-page">
         <div class="initials">Hannah</div>
         <div class="last-name">Bishop</div>
@@ -83,6 +122,25 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Explore my work and projects.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <p>Learn more about my background and skills.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch for collaborations or inquiries.</p>
+    </section>
+
 </body>
 </html>
 
