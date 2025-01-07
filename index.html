@@ -30,29 +30,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             position: relative;
         }
-        .content {
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-        }
-        p {
-            font-size: 1.5em;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
         .initials {
             position: absolute;
             top: 20px;
@@ -75,16 +52,35 @@
             text-transform: uppercase;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+        .navigation {
+            position: absolute;
+            bottom: 20px; /* Position the navigation at the bottom */
+            left: 20px; /* Align it to the left */
+            display: flex; /* Use flexbox to spread items evenly */
+            justify-content: space-between; /* Evenly space the links */
+            width: 200px; /* Adjust width to fit the three items */
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            transition: color 0.3s;
+        }
+        .navigation a:hover {
+            color: #ccc; /* Change color on hover */
+        }
     </style>
 </head>
 <body>
     <div class="landing-page">
         <div class="initials">Hannah</div>
         <div class="last-name">Bishop</div>
-        <div class="content">
-            <h1>Welcome to Our Website</h1>
-            <p>Your journey starts here.</p>
-            <a href="#next" class="button">Learn More</a>
+        <div class="navigation">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
 </body>
