@@ -61,16 +61,12 @@
         }
 
         .navigation {
-            position: fixed; /* Make the navigation bar fixed */
-            top: 0;
-            right: 0;
-            left: 0;
+            position: relative; /* Keep navigation in normal flow, no fixed positioning */
             display: flex; /* Use flexbox to spread items evenly */
             justify-content: space-between; /* Evenly space the links */
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
             padding: 20px;
-            z-index: 10; /* Keep navigation above other content */
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
         }
 
         .navigation a {
@@ -119,7 +115,7 @@
         <div class="last-name">Bishop</div>
     </div>
 
-    <!-- Navigation Bar (fixed) -->
+    <!-- Navigation Bar (relative positioning) -->
     <div class="navigation">
         <a href="#home">Home</a>
         <a href="#portfolio">Portfolio</a>
