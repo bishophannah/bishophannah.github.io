@@ -66,14 +66,16 @@
         }
         .last-name {
             position: absolute;
-            top: 45px; /* Adjusted to position the last name below the first name */
             left: 20px;
+            top: 80px; /* Starting position */
             font-size: 1em; /* Reduced font size */
             font-weight: bolder;
             font-family: 'ivyoradisplay', sans-serif;
             color: white;
             text-transform: uppercase;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: rotate(-90deg); /* Rotate the text to make it vertical */
+            transform-origin: top left; /* Ensure proper rotation origin */
         }
     </style>
 </head>
