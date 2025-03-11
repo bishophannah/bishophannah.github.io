@@ -4,138 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hannah Bishop</title>
-    
-    <!-- Link to Adobe Fonts (IvyOra Display Bold font) -->
-    <link rel="stylesheet" href="https://use.typekit.net/your-unique-url.css">
-    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body, html {
-            height: 100%;
+        body {
             font-family: Arial, sans-serif;
+            background-color: #fff;
+            text-align: center;
+            padding: 50px 20px;
         }
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111;
+            margin-bottom: 30px;
         }
-
-        .landing-page {
-            height: 100vh;
-            background-image: url('media/1.jpg');
-            background-size: cover;
-            background-position: center;
+        .image-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            position: relative;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-
-        .initials {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 2.5em; /* Same size for both */
-            font-weight: bolder; /* Thicker weight */
-            font-family: 'ivyoradisplay', sans-serif; /* Apply the IvyOra Display Bold font */
-            color: white;
-            text-transform: uppercase; /* Make text uppercase */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
         }
-
-        .last-name {
-            position: absolute;
-            top: 60px; /* Positioning 'Bishop' just under the 'H' of 'Hannah' */
-            left: 20px; /* Align 'Bishop' under the 'H' */
-            font-size: 2.5em; /* Same font size as Hannah */
-            font-weight: bolder;
-            font-family: 'ivyoradisplay', sans-serif;
-            color: white;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
-
-        .navigation {
-            position: absolute;
-            bottom: 20px; /* Position the navigation at the bottom */
-            right: 0px; /* Moved further to the right */
-            display: flex; /* Use flexbox to spread items evenly */
-            justify-content: space-evenly; /* Adjust to bring links closer together */
-            width: 400px; /* Decreased width for closer spacing */
-        }
-
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            font-family: Arial, sans-serif;
-            transition: color 0.3s;
-        }
-
-        .navigation a:hover {
-            color: #ccc; /* Change color on hover */
-        }
-
-        /* Section Styles */
-        section {
-            padding: 100px 20px;
-            text-align: center;
-            color: black;
-        }
-
-        #portfolio, #story, #contact {
-            background-color: white; /* White background */
-        }
-
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
-        }
-
     </style>
 </head>
 <body>
-
-    <div class="landing-page">
-        <div class="initials">Hannah</div>
-        <div class="last-name">Bishop</div>
-        <div class="navigation">
-            <a href="#portfolio">Portfolio</a>
-            <a href="#story">Story</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <h1>HANNAH BISHOP</h1>
+    <div class="image-container">
+        <img src="https://via.placeholder.com/300" alt="Image 1">
+        <img src="https://via.placeholder.com/300" alt="Image 2">
     </div>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Explore my work and projects.</p>
-    </section>
-
-    <!-- Story Section (formerly About) -->
-    <section id="story">
-        <h2>Story</h2>
-        <p>Learn more about my background and journey.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch for collaborations or inquiries.</p>
-    </section>
-
 </body>
 </html>
-
-
-
