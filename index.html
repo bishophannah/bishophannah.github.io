@@ -32,10 +32,81 @@
         .button:hover {
             background: rgba(0, 0, 0, 0.9);
         }
+        #contact-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 51%; /* Adjusted left position */
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 48px 64px;
+            border-radius: 10px;
+            font-size: 28.8px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+        .contact-btn {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+        }
+        .portfolio-btn {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+        }
+        #name-display {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f5f5dc; /* Original color */
+            font-size: 6em;
+            font-weight: bold;
+            text-align: center;
+            opacity: 1;
+            transition: opacity 2s ease;
+        }
+        #name-display div:last-child {
+            margin-left: 0.25em; /* Adjust this value to fine-tune the stagger */
+        }
+        #name-display div {
+            color: #feffc3; /* Slightly paler yellow */
+        }
     </style>
 </head>
 <body>
-    <a href="./portfolio/" class="button" style="align-self: flex-end;">Portfolio</a>
-    <a href="https://www.google.com" class="button" style="align-self: flex-end;">Contact</a>
+    <div id="name-display">
+        <div style="margin-left: -45%;">HAN</div>
+        <div style="margin-left: 45%;">NAH</div>
+    </div>
+    <a href="#" class="button contact-btn" id="contact-btn">Contact</a>
+    <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
+
+    <div id="contact-info">
+        <p>Hannah Bishop</p>
+        <p>Cell: (518) 744-3011</p>
+        <p>Email: hanbishop2@gmail.com</p>
+    </div>
+
+    <script>
+        const contactButton = document.getElementById('contact-btn');
+        const contactInfo = document.getElementById('contact-info');
+        const nameDisplay = document.getElementById('name-display');
+
+        contactButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            nameDisplay.style.opacity = 0;
+            setTimeout(function(){
+                contactInfo.style.display = 'block';
+                setTimeout(function() {
+                    contactInfo.style.opacity = 1;
+                }, 10);
+            }, 2000) // delay contact info fade in by 2000ms (2 seconds)
+        });
+    </script>
 </body>
 </html>
