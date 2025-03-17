@@ -12,13 +12,13 @@
         }
         body {
             background: url('media/background.JPG') no-repeat center center/cover;
-            height: 100vh;
+            min-height: 100vh; /* Ensure body is at least viewport height */
             overflow-x: hidden;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center elements horizontally */
             padding: 40px;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
+            scroll-behavior: smooth;
         }
         .button {
             font-size: 36px;
@@ -38,15 +38,11 @@
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
         .portfolio-btn {
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
+            margin-top: auto; /* Push to the bottom */
+            margin-left: auto;
+            align-self: flex-start; /* Align left */
         }
         #name-display {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: #f5f5dc;
             font-size: 6em;
             font-weight: bold;
@@ -54,6 +50,8 @@
             opacity: 1;
             transition: opacity 2s ease;
             font-family: 'Cormorant Garamond', serif;
+            margin-top: auto;
+            margin-bottom: auto;
         }
         #name-display div:last-child {
             margin-left: 0.25em;
@@ -66,7 +64,7 @@
             color: black;
             padding: 20px;
             width: 80%;
-            margin: 100vh auto; /* Add margin to push it below the landing page */
+            margin-top: 100vh; /* Push below the initial viewport */
             border-radius: 10px;
             text-align: center;
             max-height: 50vh;
@@ -80,7 +78,7 @@
 <body>
     <div id="name-display">
         <div style="margin-left: -45%;">HAN</div>
-        <div style="margin-left: 45%;">NAH</div>
+        <div style="margin-left: 45%;">NAHROW_INPUT</div>
     </div>
     <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
 
