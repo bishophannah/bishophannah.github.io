@@ -36,19 +36,6 @@
         .button:hover {
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
-        #contact-info {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 51%;
-            transform: translate(-50%, -50%);
-            padding: 48px 64px;
-            font-size: 36px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 2s ease;
-            font-family: 'PT Serif', serif;
-        }
         .contact-btn {
             position: absolute;
             bottom: 5%;
@@ -78,6 +65,25 @@
         #name-display div {
             color: #feffc3;
         }
+        #contact-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: #feffc3;
+            padding: 10px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent wrapping */
+            font-family: 'PT Serif', serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        #contact-bar a {
+            color: #feffc3;
+            text-decoration: none;
+            margin: 0 20px;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,30 +94,19 @@
         <div style="margin-left: -45%;">HAN</div>
         <div style="margin-left: 45%;">NAH</div>
     </div>
-    <a href="#" class="button contact-btn" id="contact-btn">Contact</a>
     <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
+    <a href="#" class="button contact-btn">Contact</a>
 
-    <div id="contact-info">
-        <p>Hannah Bishop</p>
-        <p>Cell: (518) 744-5562</p>
-        <p>Email: hanbishop2@gmail.com</p>
+    <div id="contact-bar">
+        <a href="mailto:hanbishop2@gmail.com">Email: hanbishop2@gmail.com</a>
+        <span>Cell: (518) 744-5562</span>
+        <span>LinkedIn: [Your LinkedIn Profile URL]</span>
+        <span>GitHub: [Your GitHub Profile URL]</span>
+        <span>Other: [Any Other Contact Info]</span>
     </div>
 
     <script>
-        const contactButton = document.getElementById('contact-btn');
-        const contactInfo = document.getElementById('contact-info');
-        const nameDisplay = document.getElementById('name-display');
-
-        contactButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            nameDisplay.style.opacity = 0;
-            setTimeout(function(){
-                contactInfo.style.display = 'block';
-                setTimeout(function() {
-                    contactInfo.style.opacity = 1;
-                }, 10);
-            }, 2000)
-        });
+        // Removed contact pop-up script
     </script>
 </body>
 </html>
