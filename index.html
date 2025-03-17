@@ -12,46 +12,62 @@
         }
         body {
             background: url('media/background.JPG') no-repeat center center/cover;
-            min-height: 100vh; /* Ensure body is at least viewport height */
-            overflow-x: hidden;
+            height: 100vh;
+            overflow: hidden;
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center elements horizontally */
+            justify-content: space-between;
+            align-items: flex-end;
             padding: 40px;
-            scroll-behavior: smooth;
         }
-        .button {
-            font-size: 36px;
-            font-weight: 200;
+        .button, #contact-info {
+            font-size: 36px; /* Increased font size */
+            font-weight: normal; /* Use normal font-weight for thinner look */
             text-decoration: none;
             color: #feffc3;
-            font-family: 'Spectral SC', serif;
-            padding: 25px 50px;
+            font-family: 'Great Vibes', cursive; /* Elegant, thinner font */
+            padding: 25px 50px; /* Increased padding */
             border-radius: 5px;
             transition: background 0.3s;
             background: transparent;
             border: none;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            text-transform: uppercase;
         }
-        .button:hover {
+        .button:hover, #contact-info {
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
+        #contact-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+            padding: 48px 64px;
+            font-size: 36px; /* Match button font size */
+            text-align: center;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+        .contact-btn {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+        }
         .portfolio-btn {
-            margin-top: auto; /* Push to the bottom */
-            margin-left: auto;
-            align-self: flex-start; /* Align left */
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
         }
         #name-display {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             color: #f5f5dc;
             font-size: 6em;
             font-weight: bold;
             text-align: center;
             opacity: 1;
             transition: opacity 2s ease;
-            font-family: 'Cormorant Garamond', serif;
-            margin-top: auto;
-            margin-bottom: auto;
         }
         #name-display div:last-child {
             margin-left: 0.25em;
@@ -59,44 +75,38 @@
         #name-display div {
             color: #feffc3;
         }
-        #contact-section {
-            background: white;
-            color: black;
-            padding: 20px;
-            width: 80%;
-            margin-top: 100vh; /* Push below the initial viewport */
-            border-radius: 10px;
-            text-align: center;
-            max-height: 50vh;
-            overflow-y: auto;
-        }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=PT+Serif&family=Spectral+SC:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="name-display">
         <div style="margin-left: -45%;">HAN</div>
-        <div style="margin-left: 45%;">NAHROW_INPUT</div>
+        <div style="margin-left: 45%;">NAH</div>
     </div>
+    <a href="#" class="button contact-btn" id="contact-btn">Contact</a>
     <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
 
-    <div id="contact-section">
-        <h2>Contact Information</h2>
+    <div id="contact-info">
+        <p>Hannah Bishop</p>
+        <p>Cell: (518) 744-3011</p>
         <p>Email: hanbishop2@gmail.com</p>
-        <p>Cell: (518) 744-5562</p>
-        <p>LinkedIn: [Your LinkedIn Profile URL]</p>
-        <p>GitHub: [Your GitHub Profile URL]</p>
-        <p>Other: [Any Other Contact Info]</p>
-        <p>Additional Contact Details...</p>
-        <p>...</p>
-        <p>...</p>
-        <p>...</p>
     </div>
 
     <script>
-        // No JavaScript needed for simple scrolling
+        const contactButton = document.getElementById('contact-btn');
+        const contactInfo = document.getElementById('contact-info');
+        const nameDisplay = document.getElementById('name-display');
+
+        contactButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            nameDisplay.style.opacity = 0;
+            setTimeout(function(){
+                contactInfo.style.display = 'block';
+                setTimeout(function() {
+                    contactInfo.style.opacity = 1;
+                }, 10);
+            }, 2000)
+        });
     </script>
 </body>
 </html>
