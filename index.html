@@ -19,20 +19,21 @@
             align-items: flex-end;
             padding: 40px;
         }
-        .button, #contact-info {
+        .button {
             font-size: 36px;
             font-weight: normal;
             text-decoration: none;
             color: #feffc3;
-            font-family: 'PT Serif', serif; /* PT Serif for buttons and contact */
+            font-family: 'Spectral SC', serif; /* Spectral SC for buttons */
             padding: 25px 50px;
             border-radius: 5px;
             transition: background 0.3s;
             background: transparent;
             border: none;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase; /* Uppercase text */
         }
-        .button:hover, #contact-info {
+        .button:hover {
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
         #contact-info {
@@ -46,6 +47,7 @@
             text-align: center;
             opacity: 0;
             transition: opacity 2s ease;
+            font-family: 'PT Serif', serif; /* PT Serif for contact info */
         }
         .contact-btn {
             position: absolute;
@@ -79,7 +81,7 @@
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="name-display">
