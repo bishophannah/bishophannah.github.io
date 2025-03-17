@@ -13,7 +13,7 @@
         body {
             background: url('media/background.JPG') no-repeat center center/cover;
             height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scrollbar */
+            overflow-x: hidden;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -36,11 +36,6 @@
         }
         .button:hover {
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-        }
-        .contact-btn {
-            position: absolute;
-            bottom: 5%;
-            right: 5%;
         }
         .portfolio-btn {
             position: absolute;
@@ -71,12 +66,11 @@
             color: black;
             padding: 20px;
             width: 80%;
-            margin: 50vh auto; /* Center vertically and horizontally */
+            margin: 100vh auto; /* Add margin to push it below the landing page */
             border-radius: 10px;
             text-align: center;
-            display: none; /* Initially hidden */
-            max-height: 50vh; /* Set a maximum height */
-            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 50vh;
+            overflow-y: auto;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,7 +83,6 @@
         <div style="margin-left: 45%;">NAH</div>
     </div>
     <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
-    <a href="#contact-section" class="button contact-btn" id="contact-btn">Contact</a>
 
     <div id="contact-section">
         <h2>Contact Information</h2>
@@ -105,14 +98,7 @@
     </div>
 
     <script>
-        const contactButton = document.getElementById('contact-btn');
-        const contactSection = document.getElementById('contact-section');
-
-        contactButton.addEventListener('click', function(event) {
-            event.preventDefault();
-            contactSection.style.display = 'block'; // Show the contact section
-            window.location.hash = 'contact-section'; // Scroll to the contact section
-        });
+        // No JavaScript needed for simple scrolling
     </script>
 </body>
 </html>
