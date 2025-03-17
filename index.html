@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah Bishop</title>
+    <title>Personal Website</title>
     <style>
         * {
             margin: 0;
@@ -11,61 +11,31 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            color: #111;
-            text-align: center;
-        }
-        header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: url('media/background.JPG') no-repeat center center/cover;
             height: 100vh;
-            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 40px;
         }
-        h1 {
-            font-size: 80px;
+        .button {
+            font-size: 24px;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-decoration: none;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 50px 0;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        footer {
-            padding: 20px;
-            background-color: #fff;
-            font-size: 14px;
+        .button:hover {
+            background: rgba(0, 0, 0, 0.9);
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>HANNAH BISHOP</h1>
-    </header>
-    <div class="container">
-        <div class="image-grid">
-            <img src="https://via.placeholder.com/400" alt="Image 1">
-            <img src="https://via.placeholder.com/400" alt="Image 2">
-            <img src="https://via.placeholder.com/400" alt="Image 3">
-            <img src="https://via.placeholder.com/400" alt="Image 4">
-        </div>
-    </div>
-    <footer>
-        &copy; 2025 Hannah Bishop. All Rights Reserved.
-    </footer>
+    <a href="https://www.google.com" class="button" style="align-self: flex-end;">Portfolio</a>
+    <a href="https://www.google.com" class="button" style="align-self: flex-end;">Contact</a>
 </body>
 </html>
