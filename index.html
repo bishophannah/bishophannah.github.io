@@ -13,11 +13,12 @@
         body {
             background: url('media/background.JPG') no-repeat center center/cover;
             height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             padding: 40px;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
         }
         .button {
             font-size: 36px;
@@ -65,24 +66,17 @@
         #name-display div {
             color: #feffc3;
         }
-        #contact-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            color: #feffc3;
-            padding: 10px;
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: nowrap; /* Prevent wrapping */
-            font-family: 'PT Serif', serif;
-            font-size: 20px;
+        #contact-section {
+            background: white;
+            color: black;
+            padding: 20px;
+            width: 80%;
+            margin: 50vh auto; /* Center vertically and horizontally */
+            border-radius: 10px;
             text-align: center;
-        }
-        #contact-bar a {
-            color: #feffc3;
-            text-decoration: none;
-            margin: 0 20px;
+            display: none; /* Initially hidden */
+            max-height: 50vh; /* Set a maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,18 +89,30 @@
         <div style="margin-left: 45%;">NAH</div>
     </div>
     <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
-    <a href="#" class="button contact-btn">Contact</a>
+    <a href="#contact-section" class="button contact-btn" id="contact-btn">Contact</a>
 
-    <div id="contact-bar">
-        <a href="mailto:hanbishop2@gmail.com">Email: hanbishop2@gmail.com</a>
-        <span>Cell: (518) 744-5562</span>
-        <span>LinkedIn: [Your LinkedIn Profile URL]</span>
-        <span>GitHub: [Your GitHub Profile URL]</span>
-        <span>Other: [Any Other Contact Info]</span>
+    <div id="contact-section">
+        <h2>Contact Information</h2>
+        <p>Email: hanbishop2@gmail.com</p>
+        <p>Cell: (518) 744-5562</p>
+        <p>LinkedIn: [Your LinkedIn Profile URL]</p>
+        <p>GitHub: [Your GitHub Profile URL]</p>
+        <p>Other: [Any Other Contact Info]</p>
+        <p>Additional Contact Details...</p>
+        <p>...</p>
+        <p>...</p>
+        <p>...</p>
     </div>
 
     <script>
-        // Removed contact pop-up script
+        const contactButton = document.getElementById('contact-btn');
+        const contactSection = document.getElementById('contact-section');
+
+        contactButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            contactSection.style.display = 'block'; // Show the contact section
+            window.location.hash = 'contact-section'; // Scroll to the contact section
+        });
     </script>
 </body>
 </html>
