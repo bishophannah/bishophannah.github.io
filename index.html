@@ -11,46 +11,104 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Great Vibes', cursive;
-            background: #000;
-            color: #feffc3;
-        }
-        .section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        #landing {
-            height: 100vh;
             background: url('media/background.JPG') no-repeat center center/cover;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 40px;
+        }
+        .button, #contact-info {
+            font-size: 36px; /* Increased font size */
+            font-weight: normal; /* Use normal font-weight for thinner look */
+            text-decoration: none;
+            color: #feffc3;
+            font-family: 'Great Vibes', cursive; /* Elegant, thinner font */
+            padding: 25px 50px; /* Increased padding */
+            border-radius: 5px;
+            transition: background 0.3s;
+            background: transparent;
+            border: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .button:hover, #contact-info {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+        #contact-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+            padding: 48px 64px;
+            font-size: 36px; /* Match button font size */
+            text-align: center;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+        .contact-btn {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+        }
+        .portfolio-btn {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
         }
         #name-display {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f5f5dc;
             font-size: 6em;
             font-weight: bold;
+            text-align: center;
+            opacity: 1;
+            transition: opacity 2s ease;
         }
-        #contact-section {
-            height: 25vh;
-            background: rgba(0, 0, 0, 0.9);
-            flex-direction: column;
+        #name-display div:last-child {
+            margin-left: 0.25em;
+        }
+        #name-display div {
+            color: #feffc3;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="section" id="landing">
-        <div id="name-display">
-            <div style="margin-left: -45%;">HAN</div>
-            <div style="margin-left: 45%;">NAH</div>
-        </div>
+    <div id="name-display">
+        <div style="margin-left: -45%;">HAN</div>
+        <div style="margin-left: 45%;">NAH</div>
     </div>
-    
-    <div class="section" id="contact-section">
-        <div>
-            <p>Hannah Bishop</p>
-            <p>Email: hanbishop2@gmail.com</p>
-        </div>
+    <a href="#" class="button contact-btn" id="contact-btn">Contact</a>
+    <a href="./portfolio/" class="button portfolio-btn">Portfolio</a>
+
+    <div id="contact-info">
+        <p>Hannah Bishop</p>
+        <p>Cell: (518) 744-3011</p>
+        <p>Email: hanbishop2@gmail.com</p>
     </div>
+
+    <script>
+        const contactButton = document.getElementById('contact-btn');
+        const contactInfo = document.getElementById('contact-info');
+        const nameDisplay = document.getElementById('name-display');
+
+        contactButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            nameDisplay.style.opacity = 0;
+            setTimeout(function(){
+                contactInfo.style.display = 'block';
+                setTimeout(function() {
+                    contactInfo.style.opacity = 1;
+                }, 10);
+            }, 2000)
+        });
+    </script>
 </body>
 </html>
+
+
